@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -137,34 +137,67 @@
                 },
             },
             Windows: {
-                SingBox: {
+                Hiddify: {
                     url: [
                         {
                             name: "",
-                            url: "https://github.com/SagerNet/sing-box/releases/download/v1.9.0-rc.3/sing-box-1.9.0-rc.3-windows-amd64.zip",
+                            url: "https://github.com/hiddify/hiddify-next/releases/download/v2.5.7/Hiddify-Windows-Setup-x64.exe",
+                            best: true,
+                        },
+                    ],
+                    tutorial: "",
+                    autoImport: "hiddify://import/?url=",
+                },
+                InvisibleMan: {
+                    url: [
+                        {
+                            name: "64-bit",
+                            url: "https://github.com/InvisibleManVPN/InvisibleMan-XRayClient/releases/download/v2.6.3/InvisibleManXRay-x64.zip",
+                            best: true,
+                        },
+                    ],
+                    tutorial: "",
+                    autoImport: "invxray://subscription/?url=",
+                },
+                InvisibleMan: {
+                    url: [
+                        {
+                            name: "32-bit",
+                            url: "https://github.com/InvisibleManVPN/InvisibleMan-XRayClient/releases/download/v2.6.3/InvisibleManXRay-x86.zip",
+                            best: false,
+                        },
+                    ],
+                    tutorial: "",
+                    autoImport: "invxray://subscription/?url=",
+                },
+                NetMod: {
+                    url: [
+                        {
+                            name: "64-bit",
+                            url: "https://sourceforge.net/projects/netmodhttp/files/Setup/NetMod_x64%28Latest%29.exe/download",
                             best: false,
                         },
                     ],
                     tutorial: "",
                     autoImport: "",
                 },
-                nekoray: {
+                NetMod: {
                     url: [
                         {
-                            name: "",
-                            url: "https://github.com/MatsuriDayo/nekoray/releases/download/3.26/nekoray-3.26-2023-12-09-windows64.zip",
+                            name: "32-bit",
+                            url: "https://sourceforge.net/projects/netmodhttp/files/Setup/NetMod_x86%28Latest%29.exe/download",
                             best: false,
                         },
                     ],
-                    tutorial: "https://github.com/MuhammadAshouri/marzban-template-tutorial/raw/master/nekoray.MP4",
+                    tutorial: "",
                     autoImport: "",
                 },
                 v2rayN: {
                     url: [
                         {
                             name: "",
-                            url: "https://github.com/2dust/v2rayN/releases/download/6.39/zz_v2rayN-With-Core-SelfContained.7z",
-                            best: true,
+                            url: "https://github.com/2dust/v2rayN/releases/download/7.0.9/v2rayN-windows-64-SelfContained-With-Core.7z",
+                            best: false,
                         },
                     ],
                     tutorial: "https://github.com/MuhammadAshouri/marzban-template-tutorial/raw/master/v2rayN.MP4",
@@ -305,7 +338,7 @@
             <div class="mx-auto max-w-xl">
                 <div class="flex flex-col sm:flex-row space-y-10 sm:space-y-0 sm:divide-x sm:rtl:divide-x-reverse sm:divide-blue-600/50">
                     <div class="basis-1/3 space-y-5 flex flex-col items-center py-3 sm:ltr:pr-9 sm:rtl:pl-9" x-data>
-                        <img src="https://cdn.jsdelivr.net/gh/MuhammadAshouri/marzban-templates@master/template-01/images/marzban.svg" class="w-28" />
+                        <img src="https://www.svgrepo.com/download/530451/dns.svg" class="w-28" />
                         <span class="inline-block dark:text-white text-black font-semibold text-lg">{{ user.username }}</span>
                         <span class="px-4 py-2 rounded-full inline-block shadow-md shadow-green-900 font-bold text-gray-200" x-data="{status: '{{ user.status.value }}'}" x-text="[status == 'active' ? $t('active') : status == 'limited' ? $t('limited') : status == 'expired' ? $t('expired') : status == 'on_hold' ? $t('onHold') : $t('disabled')]" :class="[status == 'active' ? 'bg-blue-600' : status == 'limited' ? 'bg-red-600' : status == 'expired' ? 'bg-orange-600' : 'bg-gray-600']"></span>
                         <span class="flex cursor-pointer" onclick="openSettings()">
